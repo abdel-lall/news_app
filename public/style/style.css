@@ -1,0 +1,63 @@
+@font-face {
+    font-family: "Cloister_Black_BT";
+    src: url(../font/cloister-black-bt_[allfont.net].ttf);
+  }
+#jumbtitle{
+    font-family:  'Cloister_Black_BT'; 
+    font-size: 150px;
+    color: black;
+}
+#jumb{
+    background-image: url(../images/reading2mod.jpg);
+    margin-bottom: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#navbar{
+    background-color: #8da3cc;
+    color: black;
+    font-family: 'Old Standard TT', serif;
+    font-size: 20px;
+}
+.btn.btn-outline-success.my-2.my-sm-0.btnscls{
+    color: black;
+    border-color: black;
+   
+}
+.btn.btn-outline-success.my-2.my-sm-0.btnscls:hover{
+    background-color: rgba(255, 255, 255, 0);
+    border-bottom-width: 2px;
+   
+}
+#container{
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding-top: 50px;
+}
+#lead{
+    font-size: 30px;
+}
+#artcontainer{
+    /* background-color: red; */
+    padding: 20px;
+    padding-left: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'Old Standard TT', serif;
+}
+#artctntitle{
+    border-bottom-style: solid;
+    border-bottom-color: black;
+    border-bottom-width: 2px;
+    
+}
+.row.articleRow{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom-style: solid;
+    border-bottom-color: #c0bfbd;
+    border-bottom-width: 1px;
+}
+#arturl{
+    color: black;
+}
