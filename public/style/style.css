@@ -19,12 +19,12 @@
     font-family: 'Old Standard TT', serif;
     font-size: 20px;
 }
-.btn.btn-outline-success.my-2.my-sm-0.btnscls{
+.btn.btn-outline-success.my-2.my-sm-0{
     color: black;
     border-color: black;
    
 }
-.btn.btn-outline-success.my-2.my-sm-0.btnscls:hover{
+.btn.btn-outline-success.my-2.my-sm-0:hover{
     background-color: rgba(255, 255, 255, 0);
     border-bottom-width: 2px;
    
@@ -58,9 +58,27 @@
     border-bottom-color: #c0bfbd;
     border-bottom-width: 1px;
 }
+.row.notes{
+    padding:20px;
+    border-bottom-style: solid;
+    border-bottom-color: #c0bfbd;
+    border-bottom-width: 1px;
+}
 #arturl{
     color: black;
 }
 #noart2{
     margin-top: 20px;
+}
+#artsvd{
+    font-family: 'Old Standard TT', serif;
+    margin: 0 auto;
+}
+.input-group.mb-3.noteinput{
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom-style: solid;
+    border-bottom-color: #c0bfbd;
+    border-bottom-width: 1px;
+   
 }

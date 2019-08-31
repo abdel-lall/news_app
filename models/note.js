@@ -1,6 +1,8 @@
 var mongoose = require("mongoose");
 
-var noteSchema = new mongoose.Schema({ 
+var Schema = mongoose.Schema;
+
+var noteSchema = new Schema({ 
     content : {
         type: String,
         required: true
