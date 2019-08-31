@@ -41,15 +41,9 @@
         
         <ul lass="list-group">
             {{#each note}}
-            <li class="liitm">{{content}}<button class='btn btn-outline-success my-2 my-sm-0 deletenotebtn' type='submit' id='deletenotebtn'
-                >&#10005</button></li>
-        {{!-- w: {{../this}}
-         h: {{this}} --}}
+            <li class="liitm">{{content}}<button class='btn btn-outline-success my-2 my-sm-0 deletenotebtn' type='submit' id='{{_id}}'
+              data-id={{../_id}}  >&#10005</button></li>
             {{/each}}
-        {{!-- <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati enim doloribus consequuntur officia corporis alias voluptas rem eos, excepturi facere.<button class='btn btn-outline-success my-2 my-sm-0 deletenotebtn' type='submit' id='deletenotebtn'
-                >&#10005</button></li>
-        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid recusandae ea nostrum rerum quisquam ipsam, dolorum dolorem nemo odit hic.</li>
-        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum illum debitis quod perferendis ea suscipit dicta eius, quis necessitatibus cupiditate.</li> --}}
         </ul>
     </div>
     {{/each}}

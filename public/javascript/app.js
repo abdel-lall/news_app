@@ -125,4 +125,18 @@ $(".btn.btn-outline-success.my-2.my-sm-0.shownotesbtn").on("click", function (e)
 
   })
 })
-
+$(".btn.btn-outline-success.my-2.my-sm-0.deletenotebtn").on("click",function(e){
+  e.preventDefault()
+  var data = {
+    idArticle : $(this).attr("data-id"),
+    idNote : $(this).attr("id")
+  }
+  console.log(data)
+  $.ajax({
+    type: 'PUT',
+    data : data
+  }).then(function(res){
+     console.log("deleted")
+     location.reload();
+  })
+})

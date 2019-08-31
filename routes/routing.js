@@ -109,9 +109,33 @@ app.post("/savedarticales",function(req,res){
             }
           });
       })
-      
-    
-})
 
+})
+app.put("/savedarticales",function(req,res){    
+    var idArticle = req.body.idArticle
+    var idNote = req.body.idNote
+    // console.log(req.body)
+      db.Article.findById( idArticle , function (err, article) {
+        if (!err) {
+            // article.findByIdAndRemove(note._id, function(doc) {
+
+
+
+            for(i=0;i<article.note.length;i++){
+                if(article.note[i] == idNote){
+                    article.note.splice(i, 1);
+                    article.save(function (err) {
+                 if(err) console.log(err)
+                });
+                }
+                
+            }
+            db.Note.findByIdAndRemove(idNote, function(notes) {
+                res.sendStatus(200);   
+            })
+            
+        }
+      });    
+})
 
 }
