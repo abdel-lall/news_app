@@ -65,12 +65,16 @@ module.exports = function (app) {
     })
 app.get("/savedarticales",function(req,res){
     db.Article.find({})
+    .populate("note")
     .then(function(articles) { 
+        
+       
         res.render("articlenotes",{articles})
+        
        
       })
       .catch(function(err) {
-        // res.json(err);
+        console.log(err)
       });
     
 })
@@ -90,8 +94,22 @@ app.delete("/savedarticales",function(req,res){
 })
 app.post("/savedarticales",function(req,res){
 
-    console.log(req.body)
-
+    
+    db.Note.create({content: req.body.content})
+    .then(function(ntdb) {
+        noteid =  ntdb._id
+      db.Article.findById({ _id: req.body.id },function(err,artdb){
+            if (!err) {
+              artdb.note.push(ntdb);
+              artdb.save(function (err) {
+                if (!err) {
+                    res.sendStatus(200)
+                }
+              });
+            }
+          });
+      })
+      
     
 })
 

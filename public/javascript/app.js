@@ -81,7 +81,7 @@ $(".btn.btn-outline-success.my-2.my-sm-0.addnotebtn").on("click", function (e) {
     data : data
     }).then(function(res){
      console.log("note added")
-     
+     location.reload()
     })
   })
   

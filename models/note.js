@@ -7,7 +7,10 @@ var noteSchema = new Schema({
         type: String,
         required: true
       }, 
- 
+      // article: {
+      //   type: Schema.Types.ObjectId,
+      //   ref: "article"
+      // }
 
 });
 var Note = mongoose.model('Note', noteSchema);

@@ -82,3 +82,13 @@
     border-bottom-width: 1px;
    
 }
+.btn.btn-outline-success.my-2.my-sm-0.deletenotebtn{
+    padding: 0;
+    width: 26px;
+    line-height: 22px;
+    padding-top: 3px;
+    margin-left: 10px;
+}
+.liitm{
+    margin-top: 10px;
+}
