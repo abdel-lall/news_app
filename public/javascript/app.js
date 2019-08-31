@@ -73,16 +73,19 @@ $(".btn.btn-outline-success.my-2.my-sm-0.addnotebtn").on("click", function (e) {
         id : $(this).attr("data-id"),
         content 
       }
-      console.log(data);
+      $.ajax({
+        type: 'POST',
+        data : data
+        }).then(function(res){
+          $("#ntadded").modal("show")
+          setTimeout(function () {
+            $("#ntadded").modal("hide")
+          }, 1000)
+          setTimeout(function () {location.reload()}, 1000)
+        })
     }
    
-     $.ajax({
-    type: 'POST',
-    data : data
-    }).then(function(res){
-     console.log("note added")
-     location.reload()
-    })
+   
   })
   
 
@@ -100,8 +103,11 @@ $(".btn.btn-outline-success.my-2.my-sm-0.deletebtn").on("click", function (e) {
     type: 'DELETE',
     data : data
   }).then(function(res){
-     console.log("deleted")
-     location.reload();
+    $("#artdeliteded").modal("show")
+    setTimeout(function () {
+      $("#artdeliteded").modal("hide")
+    }, 1000)
+    setTimeout(function () { location.reload();}, 1000)
   })
 
   
@@ -136,7 +142,11 @@ $(".btn.btn-outline-success.my-2.my-sm-0.deletenotebtn").on("click",function(e){
     type: 'PUT',
     data : data
   }).then(function(res){
-     console.log("deleted")
-     location.reload();
+    $("#ntdeleted").modal("show")
+    setTimeout(function () {
+      $("#ntdeleted").modal("hide")
+    }, 1000)
+     
+    setTimeout(function () {location.reload()}, 1000)
   })
 })
