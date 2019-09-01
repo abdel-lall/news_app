@@ -6,12 +6,9 @@ var db = require("../models")
 
 module.exports = function (app) {
 
-    var MONGODB_URI = process.env.MONGODB_URI || " mongodb://localhost/mongoHeadlines";
-    mongoose.connect(MONGODB_URI,{ useNewUrlParser: true }).then(() => {
-        console.log("Connected to Database");
-    }).catch((err) => {
-        console.log("ERROR! ", err);
-    });
+    var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
+
+    mongoose.connect(MONGODB_URI);
 
 
 
