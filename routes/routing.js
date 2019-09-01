@@ -6,7 +6,7 @@ var db = require("../models/index")
 
 module.exports = function (app) {
 
-    var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
+    var MONGODB_URI = process.env.MONGODB_URI || "mongodb://heroku_w24pxxft:m38faouf2qvff3lv92vpi0lu0s@ds151997.mlab.com:51997/heroku_w24pxxft";
      
     console.log(MONGODB_URI)
     mongoose.connect(MONGODB_URI);
