@@ -25,6 +25,6 @@ var articleSchema = new Schema({
         ref: "Note"
       }]
 });
-var Article = mongoose.model('article', articleSchema);
+var Article = mongoose.model('Article', articleSchema);
 
 module.exports = Article;
